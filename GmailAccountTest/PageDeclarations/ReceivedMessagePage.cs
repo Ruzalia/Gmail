@@ -27,6 +27,7 @@ namespace GmailTest.PageDeclarations
 
         public string GetSenderInformationText()
         {
+            WaitHelper.WaitForLoadDynamicContent();
             WaitHelper.WaitForElementAccessable(SenderName, WaitHelper.DefaultTimeOutMilliseconds, "Text information about sender");
             return SenderName.Text;
         }

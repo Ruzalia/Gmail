@@ -22,6 +22,7 @@ namespace GmailTest.PageDeclarations
         public void ClickOnNewMessageButton()
         {
             NewMessageButton.Click();
+            WaitHelper.WaitForLoadDynamicContent();
         }
 
         public IWebElement GetMessageSentConfirmation()
@@ -42,6 +43,7 @@ namespace GmailTest.PageDeclarations
 
         public void ClickOnFirstMessage()
         {
+            WaitHelper.WaitForLoadDynamicContent();
             WaitHelper.WaitForElementAccessable(FirstInboxMessage, WaitHelper.DefaultTimeOutMilliseconds, "First message");
             FirstInboxMessage.Click();
         }
